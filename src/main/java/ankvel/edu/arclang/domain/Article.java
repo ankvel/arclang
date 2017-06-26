@@ -12,7 +12,8 @@ import javax.persistence.*;
 @Data
 public class Article {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "article_seq")
+    @SequenceGenerator(name="article_seq", allocationSize=100)
     private Long id;
 
     private String title;
