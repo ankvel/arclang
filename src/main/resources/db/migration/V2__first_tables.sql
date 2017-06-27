@@ -13,7 +13,6 @@ create table article(
 
 create sequence article_seq start with 1 increment by 1;
 create sequence arc_user_seq start with 1 increment by 1;
-create sequence hibernate_sequence start with 1 increment by 1;
 
 insert into arc_user(id, name, pass) values (nextval('arc_user_seq'), 'ankvel', 'ASDQWEZXC');
 insert into article(id, author_id, title, content)

@@ -11,10 +11,10 @@ import javax.persistence.*;
 @Entity
 @Data
 @Table(name = "arc_user")
+@SequenceGenerator(name="arc_user_seq", sequenceName = "arc_user_seq", allocationSize=100)
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "arc_user_seq")
-    @SequenceGenerator(name="arc_user_seq", allocationSize=100)
     private Long id;
 
     private String name;
